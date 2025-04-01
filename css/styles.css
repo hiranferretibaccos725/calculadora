@@ -1,0 +1,83 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+#calc {
+  width: 400px;
+  background-color: #c4c4c4;
+  color: #000;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#calc h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #666;
+}
+
+#operations {
+  text-align: right;
+}
+
+#previous-operation,
+#current-operation {
+  min-height: 2rem; /* Quando não tiver números, já terá uma altura prevista para esse número. */
+  overflow-wrap: break-word; /* Quando tiver números muito grandes, vai servir para quebrar a linha e não jogar os números para fora. */
+  padding: 0.2rem;
+}
+
+#previous-operation {
+  color: #777;
+}
+
+#current-operation {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 1 linha com 4 frações de coluna. */
+  gap: 4px;
+}
+
+#buttons-container button {
+  background-color: #dbdbdb;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-size: 1.2rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+#buttons-container button:hover {
+  background-color: #bababa;
+  border-color: #888;
+}
+
+#buttons-container .number {
+  background-color: #f3f3f3;
+}
+
+#buttons-container #equal-btn {
+  grid-column: span 2;
+  background-color: #75a5cb;
+}
+
+#buttons-container #equal-btn:hover {
+  background-color: #3a91d8;
+}
